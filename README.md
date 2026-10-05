@@ -4,11 +4,9 @@ Watch YouTube videos together in real time. Create a room, share the code or lin
 stays in sync — play, pause, seek and video changes are broadcast over **WebSockets** and gated by
 **role-based access control** enforced on the server.
 
-> **Live demo:** `https://YOUR-APP-NAME.onrender.com` ← *replace after you deploy (steps below)*
+> **Live demo:** https://youtube-watch-party-s7t0.onrender.com ← *replace after you deploy (steps below)*
 
 ---
-
-## ✅ Assignment checklist
 
 | Requirement | Where / how |
 |---|---|
