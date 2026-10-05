@@ -1,0 +1,20 @@
+# Render Blueprint - one web service serves the API, the WebSocket server AND the built React app.
+services:
+  - type: web
+    name: youtube-watch-party
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MAX_ROOM_SIZE
+        value: 100
+    # SQLite lives on the container disk. On the free plan it is wiped on every restart/deploy.
+    # For permanent data upgrade to a paid plan, attach a disk and uncomment:
+    #   disk: { name: data, mountPath: /var/data, sizeGB: 1 }
+    #   and add env var DATABASE_PATH=/var/data/watchparty.db

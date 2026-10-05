@@ -1,0 +1,28 @@
+{
+  "name": "youtube-watch-party-server",
+  "version": "2.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node scripts/e2e-test.js",
+    "loadtest": "node scripts/loadtest.js"
+  },
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.3.0",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "redis": "^4.7.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "socket.io-client": "^4.8.1"
+  }
+}

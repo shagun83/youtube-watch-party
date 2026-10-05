@@ -1,0 +1,21 @@
+{
+  "name": "youtube-watch-party",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Real-time YouTube Watch Party with rooms, roles, approvals, chat and persistence",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client --include=dev",
+    "build": "npm run install:all && npm run build --prefix client",
+    "start": "node server/src/index.js",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "test": "npm test --prefix server",
+    "loadtest": "npm run loadtest --prefix server"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
